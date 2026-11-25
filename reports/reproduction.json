@@ -1,0 +1,93 @@
+{
+  "evaluation": "exploratoire",
+  "images": 57,
+  "manifeste_sha256": "2f447ab86a993ada219cfdc4abb1dc29d875ae303c54cc988efeb058b54addec",
+  "hog_sha256": "afe132a8b56a0eb94eab9c2fc423273c52f92276f25061cb0a0b0299f54cff63",
+  "modeles": {
+    "KNN": {
+      "parametres": {
+        "modele__metric": "euclidean",
+        "modele__n_neighbors": 5,
+        "selection__k": 256
+      },
+      "candidats": 24,
+      "f1_macro_par_pli": [
+        0.2857142857142857,
+        0.47619047619047616,
+        1.0,
+        0.625668449197861
+      ],
+      "f1_macro_moyen": 0.5968933027756558,
+      "ecart_type": 0.2620708737172403,
+      "validation_interne": {
+        "matrice_confusion": [
+          [
+            24,
+            7
+          ],
+          [
+            18,
+            8
+          ]
+        ],
+        "f1_macro": 0.5238890745071834,
+        "par_classe": {
+          "0": {
+            "precision": 0.5714285714285714,
+            "rappel": 0.7741935483870968,
+            "f1": 0.6575342465753424,
+            "effectif": 31
+          },
+          "1": {
+            "precision": 0.5333333333333333,
+            "rappel": 0.3076923076923077,
+            "f1": 0.3902439024390244,
+            "effectif": 26
+          }
+        }
+      }
+    },
+    "SVM": {
+      "parametres": {
+        "modele__C": 0.1,
+        "selection__k": 256
+      },
+      "candidats": 9,
+      "f1_macro_par_pli": [
+        0.5333333333333333,
+        0.5147058823529411,
+        0.25,
+        0.41666666666666663
+      ],
+      "f1_macro_moyen": 0.4286764705882352,
+      "ecart_type": 0.11227603833892011,
+      "validation_interne": {
+        "matrice_confusion": [
+          [
+            17,
+            14
+          ],
+          [
+            15,
+            11
+          ]
+        ],
+        "f1_macro": 0.48552754435107376,
+        "par_classe": {
+          "0": {
+            "precision": 0.53125,
+            "rappel": 0.5483870967741935,
+            "f1": 0.5396825396825397,
+            "effectif": 31
+          },
+          "1": {
+            "precision": 0.44,
+            "rappel": 0.4230769230769231,
+            "f1": 0.43137254901960786,
+            "effectif": 26
+          }
+        }
+      }
+    }
+  }
+}
